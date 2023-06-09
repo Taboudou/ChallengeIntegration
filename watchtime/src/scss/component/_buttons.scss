@@ -1,0 +1,13 @@
+
+button{
+    display: inline-block;
+    background-color: $bg-color-black;
+    color: $text-white;
+    padding: 1.25rem 2rem;
+    border: solid 1px;
+    // font-weight: $font-medium;
+    transition: .3s;
+    cursor: pointer;
+}
+
+

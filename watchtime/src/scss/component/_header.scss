@@ -1,0 +1,103 @@
+header{
+	background-color: $bg-color-black;
+	padding: 1rem 0;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #logo-link{
+        width: 100px;
+        line-height: 0;
+        z-index: 10;
+    }
+    nav ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li a{
+            display: block;
+            padding: 0.5em;
+            color: $text-white;
+            text-decoration: none;
+        }
+    }
+    #menu-button{
+        display: none;
+        z-index: 10;
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            background-image: url('../assets/hamburger-menu.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+    .header-icon{
+        display: flex;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            li a{
+                display: block;
+                padding: 0.5em;
+                color: $text-white;
+                text-decoration: none;
+            }
+    }
+    svg{
+        color:$bg-color-white;
+    }
+}
+
+@media screen and (max-width: 425px){
+
+	.container{
+		padding: 0 30px;
+	}
+
+	header{
+		display: inline;
+	}
+
+	header nav{
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--blue);
+		color: white;
+		transition: left 1s;
+	}
+
+	header nav.open{
+		left: 0;
+	}
+
+	header nav ul{
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+    #menu-button {
+        display: block !important;
+        z-index: 10;
+      }
+
+      
+	
+}
+}
